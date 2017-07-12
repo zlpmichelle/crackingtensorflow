@@ -119,6 +119,7 @@ def loop_fn_transition(time, previous_output, previous_state, previous_loop_stat
         #prediction value at current time step
         
         #Returns the index with the largest value across axes of a tensor.
+        #This is Attention!!!!
         prediction = tf.argmax(output_logits, axis=1)
         #embed prediction for the next input
         next_input = tf.nn.embedding_lookup(embeddings, prediction)

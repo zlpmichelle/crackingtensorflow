@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05ce5aa-eefb-4218-88c5-d179ed4d6219" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/dnn.py" afterPath="$PROJECT_DIR$/seq2seq/dnn.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/helpers.py" afterPath="$PROJECT_DIR$/seq2seq/helpers.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/helpers_original.py" afterPath="$PROJECT_DIR$/seq2seq/helpers_original.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/seq2seq.py" afterPath="$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/seq2seq_original.py" afterPath="$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM_original.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/seq2seq_real.py" afterPath="$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM_real.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/0622_test_features.csv" afterPath="$PROJECT_DIR$/seq2seq/data/0622_test_features.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/0622_test_labels.csv" afterPath="$PROJECT_DIR$/seq2seq/data/0622_test_labels.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/0622_train_features.csv" afterPath="$PROJECT_DIR$/seq2seq/data/0622_train_features.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/0622_train_labels.csv" afterPath="$PROJECT_DIR$/seq2seq/data/0622_train_labels.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/test_features.txt" afterPath="$PROJECT_DIR$/seq2seq/data/test_features.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/test_labels.txt" afterPath="$PROJECT_DIR$/seq2seq/data/test_labels.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/train_features.txt" afterPath="$PROJECT_DIR$/seq2seq/data/train_features.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/train_labels.txt" afterPath="$PROJECT_DIR$/seq2seq/data/train_labels.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM_real.py" afterPath="$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM_real.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +27,8 @@
       <file leaf-file-name="seq2seq_bidirectional_dynamic_rnn_LSTM_real.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM_real.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="36" />
+            <state relative-caret-position="185">
+              <caret line="121" column="30" lean-forward="false" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -58,6 +45,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/seq2seq/seq2seq_real.py" />
+        <option value="$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM_real.py" />
       </list>
     </option>
   </component>
@@ -217,8 +205,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2270" y="-399" width="1090" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39503816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39503816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -256,8 +245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seq2seq/seq2seq_bidirectional_dynamic_rnn_LSTM_real.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="36" />
+        <state relative-caret-position="185">
+          <caret line="121" column="30" lean-forward="false" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
