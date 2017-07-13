@@ -76,7 +76,7 @@ b = tf.Variable(tf.zeros([vocab_size]), dtype=tf.float32)
 
 #create padded inputs for the decoder from the word embeddings
 
-#were telling the program to test a condition, and trigger an error if the condition is false.
+#were telling the program to tests a condition, and trigger an error if the condition is false.
 assert EOS == 1 and PAD == 0
 
 eos_time_slice = tf.ones([batch_size], dtype=tf.int32, name='EOS')
@@ -195,8 +195,8 @@ sess.run(tf.global_variables_initializer())
 batch_size = 10
 
 # batches = helpers.random_sequences(length_from=3, length_to=8, vocab_lower=2, vocab_upper=10, batch_size=batch_size)
-train_features_batches = helpers.loadDataFile("data/train_features.txt")
-train_labels_batches = helpers.loadDataFile("data/train_labels.txt")
+train_features_batches = helpers.loadDataFile("../data/train_features.txt")
+train_labels_batches = helpers.loadDataFile("../data/train_labels.txt")
 
 
 print("train_features_batches:", train_features_batches)
@@ -257,11 +257,11 @@ try:
 
     # start prediction
     start = time.time()
-    test_features_batches = helpers.loadDataFile("data/test_features.txt")
-    test_labels_batches = helpers.loadDataFile("data/test_labels.txt")
+    test_features_batches = helpers.loadDataFile("../data/test_features.txt")
+    test_labels_batches = helpers.loadDataFile("../data/test_labels.txt")
     test_fd = next_feed(test_features_batches, test_labels_batches)
     print("Time used: ", time.time() - start)
-    print('  test batch loss: {}'.format(sess.run(loss, test_fd)))
+    print('  tests batch loss: {}'.format(sess.run(loss, test_fd)))
     test_predict_ = sess.run(decoder_prediction, test_fd)
 
     for i, (inp, pred) in enumerate(zip(test_fd[encoder_inputs].T, test_predict_.T)):

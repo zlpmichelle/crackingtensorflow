@@ -76,7 +76,7 @@ b = tf.Variable(tf.zeros([vocab_size]), dtype=tf.float32)
 
 #create padded inputs for the decoder from the word embeddings
 
-#were telling the program to test a condition, and trigger an error if the condition is false.
+#were telling the program to tests a condition, and trigger an error if the condition is false.
 assert EOS == 1 and PAD == 0
 
 eos_time_slice = tf.ones([batch_size], dtype=tf.int32, name='EOS')
