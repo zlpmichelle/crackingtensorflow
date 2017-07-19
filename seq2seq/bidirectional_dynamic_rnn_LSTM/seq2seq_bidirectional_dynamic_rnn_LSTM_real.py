@@ -9,7 +9,7 @@ sess = tf.InteractiveSession()
 PAD = 0
 EOS = 1
 
-vocab_size = 10
+vocab_size = 4200000
 input_embedding_size = 20 #character length
 
 encoder_hidden_units = 20 #num neurons
@@ -195,8 +195,8 @@ sess.run(tf.global_variables_initializer())
 batch_size = 10
 
 # batches = helpers.random_sequences(length_from=3, length_to=8, vocab_lower=2, vocab_upper=10, batch_size=batch_size)
-train_features_batches = helpers.loadDataFile("../data/train_features.txt")
-train_labels_batches = helpers.loadDataFile("../data/train_labels.txt")
+train_features_batches = helpers.loadDataFile("../data/real_train_features.txt")
+train_labels_batches = helpers.loadDataFile("../data/real_train_labels.txt")
 
 
 print("train_features_batches:", train_features_batches)
@@ -228,8 +228,8 @@ def next_feed(train_features_batches, train_labels_batches):
 
 loss_track = []
 
-max_batches = 3001
-batches_in_epoch = 1000
+max_batches = 30
+batches_in_epoch = 10
 
 import time
 try:
@@ -257,8 +257,8 @@ try:
 
     # start prediction
     start = time.time()
-    test_features_batches = helpers.loadDataFile("../data/test_features.txt")
-    test_labels_batches = helpers.loadDataFile("../data/test_labels.txt")
+    test_features_batches = helpers.loadDataFile("../data/real_test_features.txt")
+    test_labels_batches = helpers.loadDataFile("../data/real_test_labels.txt")
     test_fd = next_feed(test_features_batches, test_labels_batches)
     print("Time used: ", time.time() - start)
     print('  tests batch loss: {}'.format(sess.run(loss, test_fd)))
