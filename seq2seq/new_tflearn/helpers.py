@@ -35,16 +35,15 @@ def batch(inputs, max_sequence_length=None):
     
     return inputs_time_major, sequence_lengths
 
-
 def loadDataFile(feature=None):
     file = open(feature, "r")
     lines = []
     with file as myFile:
         for line in file:
             feat = []
-            line = line.split(',')
+            line = line.split(' ')
             for i in range(0, len(line)):
-                feat.append(float(line[i]))
+                feat.append(int(line[i]))
             lines.append(feat)
 
     while True:
@@ -53,7 +52,7 @@ def loadDataFile(feature=None):
 import random
 def random_sampler(filename, k):
     samples = []
-    with open(filename, 'r') as f:
+    with open(filename, 'rb') as f:
         f.seek(0, 2)
         filesize = f.tell()
 
@@ -67,11 +66,13 @@ def random_sampler(filename, k):
             li = f.readline().rstrip()
             if li == '':
                 break
+
             feat = []
-            line = str(li).split(',')
+            line = li.split(' ')
             for i in range(0, len(line)):
                 feat.append(int(line[i]))
             samples.append(feat)
+
     '''
     print(len(samples))
     for i in samples:
@@ -79,27 +80,6 @@ def random_sampler(filename, k):
     '''
     return samples
 
-def next_batch_k(filename, k, lastoffset):
-    batches = []
-    with open(filename, 'r') as f:
-        f.seek(0)
-        start = lastoffset
-        end = lastoffset + k - 1
-        for n, line in enumerate(f):
-            if n < start:
-                continue
-            elif n >= start and n <= end:
-                li = line.rstrip()
-                if li == '':
-                    break
-                feat = []
-                line = str(li).split(',')
-                for i in range(0, len(line)):
-                    feat.append(int(line[i]))
-                batches.append(feat)
-            else:
-                break
-    return batches
 
 
 def random_next_batch_k(features_filename, labels_filename, k, filesize):
@@ -115,7 +95,7 @@ def random_next_batch_k(features_filename, labels_filename, k, filesize):
                 if li == '':
                     break
                 feat = []
-                line = str(li).split(',')
+                line = str(li).split(' ')
                 for i in range(0, len(line)):
                     feat.append(int(line[i]))
                 batches_features.append(feat)
@@ -134,7 +114,7 @@ def random_next_batch_k(features_filename, labels_filename, k, filesize):
                 if li == '':
                     break
                 feat = []
-                line = str(li).split(',')
+                line = str(li).split(' ')
                 for i in range(0, len(line)):
                     feat.append(int(line[i]))
                 batches_labels.append(feat)
@@ -142,6 +122,30 @@ def random_next_batch_k(features_filename, labels_filename, k, filesize):
                 continue
     #print("***" + str(batches_labels))
     return batches_features, batches_labels
+
+
+
+def next_batch_k(filename, k, lastoffset):
+    batches = []
+    with open(filename, 'r') as f:
+        f.seek(0)
+        start = lastoffset
+        end = lastoffset + k - 1
+        for n, line in enumerate(f):
+            if n < start:
+                continue
+            elif n >= start and n <= end:
+                li = line.rstrip()
+                if li == '':
+                    break
+                feat = []
+                line = str(li).split(' ')
+                for i in range(0, len(line)):
+                    feat.append(int(line[i]))
+                batches.append(feat)
+            else:
+                break
+    return batches
 
 
 
@@ -155,7 +159,7 @@ def loadData(feature=None, length=100):
             for i in range(length - 1):
                 feat.append(float(line[i]))
             feat.append(float(line[length-1][:-1]))
-            lines.append(feat.tolist())
+            lines.append(feat)
         
     while True:
         yield lines
@@ -182,18 +186,3 @@ def random_sequences(length_from, length_to,
                               size=random_length()).tolist()
             for _ in range(batch_size)
         ]
-
-
-if __name__ == '__main__':
-    #loadDataFile("/Users/lipingzhang/Desktop/program/pycharm/seq2seq/data/0622_train_features.csv")
-    '''
-    k = 2
-    count = 0
-    for i in range(0, 2):
-        res = next_batch_k("/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/data/labels.txt", k, count)
-        print("---" + str(res))
-        count += k
-    '''
-    fea, lab = random_next_batch_k("/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/data/features.txt", "/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/data/labels.txt", 2, 3)
-    print("---" + str(fea))
-    print("---" + str(lab))

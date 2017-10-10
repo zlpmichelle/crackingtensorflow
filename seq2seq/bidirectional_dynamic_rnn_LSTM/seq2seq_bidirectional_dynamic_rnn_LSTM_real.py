@@ -9,7 +9,7 @@ sess = tf.InteractiveSession()
 PAD = 0
 EOS = 1
 
-vocab_size = 4200000
+vocab_size = 10
 input_embedding_size = 20 #character length
 
 encoder_hidden_units = 20 #num neurons
@@ -192,11 +192,11 @@ train_op = tf.train.AdamOptimizer().minimize(loss)
 
 sess.run(tf.global_variables_initializer())
 
-batch_size = 10
+batch_size = 2
 
 # batches = helpers.random_sequences(length_from=3, length_to=8, vocab_lower=2, vocab_upper=10, batch_size=batch_size)
-train_features_batches = helpers.loadDataFile("../data/real_train_features.txt")
-train_labels_batches = helpers.loadDataFile("../data/real_train_labels.txt")
+train_features_batches = helpers.loadDataFile("../data/train_features.txt")
+train_labels_batches = helpers.loadDataFile("../data/train_labels.txt")
 
 
 print("train_features_batches:", train_features_batches)
@@ -214,8 +214,8 @@ for seq in next(train_labels_batches.__iter__())[:10]:
 #############
 
 def next_feed(train_features_batches, train_labels_batches):
-    train_features_batche = next(train_features_batches)
-    train_labels_batche = next(train_labels_batches)
+    train_features_batche = train_features_batches
+    train_labels_batche = train_labels_batches
     encoder_inputs_, encoder_input_lengths_ = helpers.batch(train_features_batche)
     decoder_targets_, _ = helpers.batch(
         [(sequence) + [EOS] + [PAD] * 2 for sequence in train_labels_batche]
@@ -234,10 +234,17 @@ batches_in_epoch = 10
 import time
 try:
     start = time.time()
+    config = tf.ConfigProto()
+    config.gpu_options.allocator_type = 'BFC'
+    config.gpu_options.per_process_gpu_memory_fraction = 0.90
+    linesofar = 0
     for batch in range(max_batches):
+        train_features_batches = helpers.next_batch_k("../data/features.txt", batch_size, linesofar)
+        train_labels_batches = helpers.next_batch_k("../data/labels.txt", batch_size, linesofar)
         fd = next_feed(train_features_batches, train_labels_batches)
         _, l = sess.run([train_op, loss], fd)
         loss_track.append(l)
+        linesofar += batch_size
 
         if batch == 0 or batch % batches_in_epoch == 0:
             print('batch {}'.format(batch))
@@ -257,8 +264,8 @@ try:
 
     # start prediction
     start = time.time()
-    test_features_batches = helpers.loadDataFile("../data/real_test_features.txt")
-    test_labels_batches = helpers.loadDataFile("../data/real_test_labels.txt")
+    test_features_batches = helpers.loadDataFile("../data/test_features.txt")
+    test_labels_batches = helpers.loadDataFile("../data/test_labels.txt")
     test_fd = next_feed(test_features_batches, test_labels_batches)
     print("Time used: ", time.time() - start)
     print('  tests batch loss: {}'.format(sess.run(loss, test_fd)))
