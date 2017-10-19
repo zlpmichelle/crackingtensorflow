@@ -119,82 +119,84 @@ class TFLearnSeq2Seq(object):
         '''
         assert mode in ["train", "predict"]
 
-        # tf.reset_default_graph()
+
         checkpoint_path = checkpoint_path or ("%s%ss2s_checkpoint.tfl" % (self.data_dir or "", "/" if self.data_dir else ""))
         GO_VALUE = self.out_max_int + 1		# unique integer value used to trigger decoder outputs in the seq2seq RNN
 
-        network = tflearn.input_data(shape=[None, self.in_seq_len + self.out_seq_len], dtype=tf.int32, name="XY")
-        encoder_inputs = tf.slice(network, [0, 0], [-1, self.in_seq_len], name="enc_in")	# get encoder inputs
-        encoder_inputs = tf.unstack(encoder_inputs, axis=1)					# transform into list of self.in_seq_len elements, each [-1]
+        #tf.reset_default_graph()
+        with tf.Graph().as_default():
+            network = tflearn.input_data(shape=[None, self.in_seq_len + self.out_seq_len], dtype=tf.int32, name="XY")
+            encoder_inputs = tf.slice(network, [0, 0], [-1, self.in_seq_len], name="enc_in")	# get encoder inputs
+            encoder_inputs = tf.unstack(encoder_inputs, axis=1)					# transform into list of self.in_seq_len elements, each [-1]
 
-        decoder_inputs = tf.slice(network, [0, self.in_seq_len], [-1, self.out_seq_len], name="dec_in")	# get decoder inputs
-        decoder_inputs = tf.unstack(decoder_inputs, axis=1)					# transform into list of self.out_seq_len elements, each [-1]
+            decoder_inputs = tf.slice(network, [0, self.in_seq_len], [-1, self.out_seq_len], name="dec_in")	# get decoder inputs
+            decoder_inputs = tf.unstack(decoder_inputs, axis=1)					# transform into list of self.out_seq_len elements, each [-1]
 
-        go_input = tf.multiply( tf.ones_like(decoder_inputs[0], dtype=tf.int32), GO_VALUE ) # insert "GO" symbol as the first decoder input; drop the last decoder input
-        decoder_inputs = [go_input] + decoder_inputs[: self.out_seq_len-1]				# insert GO as first; drop last decoder input
+            go_input = tf.multiply( tf.ones_like(decoder_inputs[0], dtype=tf.int32), GO_VALUE ) # insert "GO" symbol as the first decoder input; drop the last decoder input
+            decoder_inputs = [go_input] + decoder_inputs[: self.out_seq_len-1]				# insert GO as first; drop last decoder input
 
-        feed_previous = not (mode=="train")
+            feed_previous = not (mode=="train")
 
-        if self.verbose > 3:
-            print ("feed_previous = %s" % str(feed_previous))
-            print ("encoder inputs: %s" % str(encoder_inputs))
-            print ("decoder inputs: %s" % str(decoder_inputs))
-            print ("len decoder inputs: %s" % len(decoder_inputs))
+            if self.verbose > 3:
+                print ("feed_previous = %s" % str(feed_previous))
+                print ("encoder inputs: %s" % str(encoder_inputs))
+                print ("decoder inputs: %s" % str(decoder_inputs))
+                print ("len decoder inputs: %s" % len(decoder_inputs))
 
-        #self.n_input_symbols = self.in_max_int + 1		# default is integers from 0 to 9
-        #self.n_output_symbols = self.out_max_int + 2		# extra "GO" symbol for decoder inputs
-        #tf.nn.rnn_cell
-        single_cell = getattr(tf.contrib.rnn.core_rnn_cell, cell_type)(cell_size, state_is_tuple=True)
-        if num_layers==1:
-            cell = single_cell
-        else:
-            cell = rnn_cell.MultiRNNCell([single_cell] * num_layers)
+            #self.n_input_symbols = self.in_max_int + 1		# default is integers from 0 to 9
+            #self.n_output_symbols = self.out_max_int + 2		# extra "GO" symbol for decoder inputs
+            #tf.nn.rnn_cell
+            single_cell = getattr(tf.contrib.rnn.core_rnn_cell, cell_type)(cell_size, state_is_tuple=True)
+            if num_layers==1:
+                cell = single_cell
+            else:
+                cell = rnn_cell.MultiRNNCell([single_cell] * num_layers)
 
-        if self.seq2seq_model=="embedding_rnn":
-            model_outputs, states = tf.contrib.legacy_seq2seq.embedding_rnn_seq2seq(encoder_inputs,	# encoder_inputs: A list of 2D Tensors [batch_size, input_size].
-                                                                  decoder_inputs,
-                                                                  cell,
-                                                                  num_encoder_symbols=self.n_input_symbols,
-                                                                  num_decoder_symbols=self.n_output_symbols,
-                                                                  embedding_size=embedding_size,
-                                                                  feed_previous=feed_previous)
-        elif self.seq2seq_model=="embedding_attention":
-            model_outputs, states = tf.contrib.legacy_seq2seq.embedding_attention_seq2seq(encoder_inputs,	# encoder_inputs: A list of 2D Tensors [batch_size, input_size].
-                                                                        decoder_inputs,
-                                                                        cell,
-                                                                        num_encoder_symbols=self.n_input_symbols,
-                                                                        num_decoder_symbols=self.n_output_symbols,
-                                                                        embedding_size=embedding_size,
-                                                                        num_heads=1,
-                                                                        initial_state_attention=False,
-                                                                        feed_previous=feed_previous)
-        else:
-            raise Exception('[TFLearnSeq2Seq] Unknown seq2seq model %s' % self.seq2seq_model)
+            if self.seq2seq_model=="embedding_rnn":
+                model_outputs, states = tf.contrib.legacy_seq2seq.embedding_rnn_seq2seq(encoder_inputs,	# encoder_inputs: A list of 2D Tensors [batch_size, input_size].
+                                                                      decoder_inputs,
+                                                                      cell,
+                                                                      num_encoder_symbols=self.n_input_symbols,
+                                                                      num_decoder_symbols=self.n_output_symbols,
+                                                                      embedding_size=embedding_size,
+                                                                      feed_previous=feed_previous)
+            elif self.seq2seq_model=="embedding_attention":
+                model_outputs, states = tf.contrib.legacy_seq2seq.embedding_attention_seq2seq(encoder_inputs,	# encoder_inputs: A list of 2D Tensors [batch_size, input_size].
+                                                                            decoder_inputs,
+                                                                            cell,
+                                                                            num_encoder_symbols=self.n_input_symbols,
+                                                                            num_decoder_symbols=self.n_output_symbols,
+                                                                            embedding_size=embedding_size,
+                                                                            num_heads=1,
+                                                                            initial_state_attention=False,
+                                                                            feed_previous=feed_previous)
+            else:
+                raise Exception('[TFLearnSeq2Seq] Unknown seq2seq model %s' % self.seq2seq_model)
 
-        tf.add_to_collection(tf.GraphKeys.LAYER_VARIABLES + '/' + "seq2seq_model", model_outputs)	# for TFLearn to know what to save and restore
+            tf.add_to_collection(tf.GraphKeys.LAYER_VARIABLES + '/' + "seq2seq_model", model_outputs)	# for TFLearn to know what to save and restore
 
-        # model_outputs: list of the same length as decoder_inputs of 2D Tensors with shape [batch_size x output_size] containing the generated outputs.
-        if self.verbose > 2: print ("model outputs: %s" % model_outputs)
-        network = tf.stack(model_outputs, axis=1)		# shape [-1, n_decoder_inputs (= self.out_seq_len), num_decoder_symbols]
-        if self.verbose > 2: print ("packed model outputs: %s" % network)
+            # model_outputs: list of the same length as decoder_inputs of 2D Tensors with shape [batch_size x output_size] containing the generated outputs.
+            if self.verbose > 2: print ("model outputs: %s" % model_outputs)
+            network = tf.stack(model_outputs, axis=1)		# shape [-1, n_decoder_inputs (= self.out_seq_len), num_decoder_symbols]
+            if self.verbose > 2: print ("packed model outputs: %s" % network)
 
-        if self.verbose > 3:
-            all_vars = tf.get_collection(tf.GraphKeys.VARIABLES)
-            print ("all_vars = %s" % all_vars)
+            if self.verbose > 3:
+                all_vars = tf.get_collection(tf.GraphKeys.VARIABLES)
+                print ("all_vars = %s" % all_vars)
 
-        with tf.name_scope("TargetsData"):			# placeholder for target variable (i.e. trainY input)
-            targetY = tf.placeholder(shape=[None, self.out_seq_len], dtype=tf.int32, name="Y")
+            with tf.name_scope("TargetsData"):			# placeholder for target variable (i.e. trainY input)
+                targetY = tf.placeholder(shape=[None, self.out_seq_len], dtype=tf.int32, name="Y")
 
-        network = tflearn.regression(network,
-                                     placeholder=targetY,
-                                     optimizer='adam',
-                                     learning_rate=learning_rate,
-                                     loss=self.sequence_loss,
-                                     metric=self.accuracy,
-                                     name="Y")
+            network = tflearn.regression(network,
+                                         placeholder=targetY,
+                                         optimizer='adam',
+                                         learning_rate=learning_rate,
+                                         loss=self.sequence_loss,
+                                         metric=self.accuracy,
+                                         name="Y")
 
-        model = tflearn.DNN(network, tensorboard_verbose=tensorboard_verbose, checkpoint_path=checkpoint_path)
-        return model
+            model = tflearn.DNN(network, tensorboard_verbose=tensorboard_verbose, checkpoint_path=checkpoint_path)
+            return model
 
     def train(self, num_epochs=20, model=None, model_params=None, weights_input_fn=None,
               validation_set=0.1, snapshot_step=5000, batch_size=1000, weights_output_fn=None):
@@ -231,11 +233,13 @@ class TFLearnSeq2Seq(object):
             #tensorflow.reset_default_graph()
             #with tf.Graph().as_default():
                 # tflearn.config.init_training_mode()
-            del tf.get_collection_ref(tf.GraphKeys.TRAIN_OPS)[:]
-            #model.save(weights_output_fn)
-            print ("Saved %s" % weights_output_fn)
-            self.weights_output_fn = weights_output_fn
-        return model
+            with tf.Graph().as_default():
+                #del tf.get_collection_ref(tf.GraphKeys.TRAIN_OPS)[:]
+                #del tf.get_collection_ref('LAYER_NAME_UIDS')[:]
+                model.save(weights_output_fn)
+                print ("Saved %s" % weights_output_fn)
+                self.weights_output_fn = weights_output_fn
+                return model
 
     def canonical_weights_fn(self, iteration_num=0):
         '''

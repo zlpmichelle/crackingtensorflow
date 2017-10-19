@@ -1,4 +1,4 @@
-python tflearn_seq2seq_real_io_smoke.py --in-len=30 --out-len=30 --learning-rate=0.01 --iter-num=1 -o log/0901/ --data-dir=log/0901 -m embedding_attention -e 1 predict --from-file ../data/test_features_int.txt
+python tflearn_seq2seq_real_io_smoke.py --in-len=30 --out-len=30 --learning-rate=0.01 --iter-num=1 -o 1010.tfl --data-dir=log/1010 -m embedding_attention -e 1 predict --from-file ../data/test_features_int.txt
 
 python tflearn_seq2seq_real_io_smoke.py --in-len=30 --out-len=30 --learning-rate=0.01 --iter-num=1 --data-dir=log/0901 -m embedding_attention -e 1 train
 
@@ -6,5 +6,3 @@ python tflearn_seq2seq_real_io_smoke.py --in-len=30 --out-len=30 --learning-rate
 python tflearn_seq2seq_real_io_smoke.py -i log/0901/ts2s__basic__sorted_2.tfl --in-len=30 --out-len=30 --learning-rate=0.01 --iter-num=1 --data-dir=log/0901 -m embedding_attention -e 1 predict --from-file ../data/test_features_int.txt
 
 
-import tensorflow as tf
-tf.__version__
