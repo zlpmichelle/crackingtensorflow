@@ -1,9 +1,9 @@
 # crackingtensorflow
 # cracking tf code
-## learning materials
+## Learning materials
 * http://cv-tricks.com/tensorflow-tutorial/
 * https://github.com/ahangchen/GDLnotes/blob/master/note/lesson-2/deep_network_practice.md
-
+* http://wiki.jikexueyuan.com/project/neural-networks-and-deep-learning-zh-cn/chapter5.html
 
 
 ## Courses Video
