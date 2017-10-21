@@ -280,14 +280,14 @@ class TFLearnSeq2Seq(object):
         X = np.array(Xin).astype(np.uint32)
         assert len(X)==self.in_seq_len
         if self.verbose:
-            print ("X Input shape=%s, data=%s" % (X.shape, X))
+            print ("X Input shape=%s, MNIST_data=%s" % (X.shape, X))
             print ("Expected output = %s" % str(self.sequence_pattern.generate_output_sequence(X)))
 
         Yin = [0]*self.out_seq_len
 
         XY = np.append(X, np.array(Yin).astype(np.float32))
         XY = XY.reshape([-1, self.in_seq_len + self.out_seq_len])		# batch size 1
-        if self.verbose > 1: print ("XY Input shape=%s, data=%s" % (XY.shape, XY))
+        if self.verbose > 1: print ("XY Input shape=%s, MNIST_data=%s" % (XY.shape, XY))
 
         res = model.predict(XY)
         res = np.array(res)
@@ -333,9 +333,9 @@ predict - give input sequence as argument (or specify inputs via --from-file <fi
     parser.add_argument("-n", "--name", type=str, help="name of model, used when generating default weights filenames", default=None)
     parser.add_argument("--in-len", type=int, help="input sequence length (default 10)", default=None)
     parser.add_argument("--out-len", type=int, help="output sequence length (default 10)", default=None)
-    parser.add_argument("--from-file", type=str, help="name of file to take input data sequences from (json format)", default=None)
+    parser.add_argument("--from-file", type=str, help="name of file to take input MNIST_data sequences from (json format)", default=None)
     parser.add_argument("--iter-num", type=int, help="training iteration number; specify instead of input- or output-weights to use generated filenames", default=None)
-    parser.add_argument("--data-dir", help="directory to use for storing checkpoints (also used when generating default weights filenames)", default=None)
+    parser.add_argument("--MNIST_data-dir", help="directory to use for storing checkpoints (also used when generating default weights filenames)", default=None)
     # model parameters
     parser.add_argument("-L", "--num-layers", type=int, help="number of RNN layers to use in the model (default 1)", default=1)
     parser.add_argument("--cell-size", type=int, help="size of RNN cell to use (default 32)", default=32)
@@ -492,7 +492,7 @@ def test_main1():
     '''
     import tempfile
     tempdir = tempfile.mkdtemp()
-    arglist = "--data-dir %s -e 2 --iter-num=1 -v -v --tensorboard-verbose=1 train 5000" % tempdir
+    arglist = "--MNIST_data-dir %s -e 2 --iter-num=1 -v -v --tensorboard-verbose=1 train 5000" % tempdir
     arglist = arglist.split(' ')
     tf.reset_default_graph()
     ts2s = CommandLine(arglist=arglist)
@@ -505,7 +505,7 @@ def test_main2():
     '''
     import tempfile
     tempdir = tempfile.mkdtemp()
-    arglist = "--data-dir %s -e 2 --iter-num=1 -v -v --tensorboard-verbose=1 train 5000" % tempdir
+    arglist = "--MNIST_data-dir %s -e 2 --iter-num=1 -v -v --tensorboard-verbose=1 train 5000" % tempdir
     arglist = arglist.split(' ')
     tf.reset_default_graph()
     ts2s = CommandLine(arglist=arglist)

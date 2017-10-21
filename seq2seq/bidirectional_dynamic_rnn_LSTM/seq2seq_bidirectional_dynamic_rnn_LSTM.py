@@ -202,7 +202,7 @@ batch_size = 100
 #batches = helpers.random_sequences(length_from=3, length_to=8, vocab_lower=2, vocab_upper=10, batch_size=batch_size)
 
 #batches = helpers.loadData(sys.argv[0])
-batches = helpers.loadData(feature="data/csv/0622_train_features_padded.csv", length=100)
+batches = helpers.loadData(feature="MNIST_data/csv/0622_train_features_padded.csv", length=100)
 
 print("batches:", batches)
 

@@ -22,7 +22,7 @@ y_data = [v[1] for v in vectors_set]
 
 import matplotlib.pyplot as plt
 
-plt.plot(x_data, y_data, 'ro', label='Original data')
+plt.plot(x_data, y_data, 'ro', label='Original MNIST_data')
 plt.legend()
 plt.show()
 
@@ -68,7 +68,7 @@ print step, sess.run(W), sess.run(b)
 # In[15]:
 
 
-plt.plot(x_data, y_data, 'ro', label='New data')
+plt.plot(x_data, y_data, 'ro', label='New MNIST_data')
 plt.plot(x_data, sess.run(W) * x_data + sess.run(b))
 plt.legend()
 plt.show()

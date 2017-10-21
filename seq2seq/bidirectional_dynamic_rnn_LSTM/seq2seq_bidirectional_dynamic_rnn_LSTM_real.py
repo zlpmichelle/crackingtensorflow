@@ -195,8 +195,8 @@ sess.run(tf.global_variables_initializer())
 batch_size = 2
 
 # batches = helpers.random_sequences(length_from=3, length_to=8, vocab_lower=2, vocab_upper=10, batch_size=batch_size)
-train_features_batches = helpers.loadDataFile("../data/train_features.txt")
-train_labels_batches = helpers.loadDataFile("../data/train_labels.txt")
+train_features_batches = helpers.loadDataFile("../MNIST_data/train_features.txt")
+train_labels_batches = helpers.loadDataFile("../MNIST_data/train_labels.txt")
 
 
 print("train_features_batches:", train_features_batches)
@@ -239,8 +239,8 @@ try:
     config.gpu_options.per_process_gpu_memory_fraction = 0.90
     linesofar = 0
     for batch in range(max_batches):
-        train_features_batches = helpers.next_batch_k("../data/features.txt", batch_size, linesofar)
-        train_labels_batches = helpers.next_batch_k("../data/labels.txt", batch_size, linesofar)
+        train_features_batches = helpers.next_batch_k("../MNIST_data/features.txt", batch_size, linesofar)
+        train_labels_batches = helpers.next_batch_k("../MNIST_data/labels.txt", batch_size, linesofar)
         fd = next_feed(train_features_batches, train_labels_batches)
         _, l = sess.run([train_op, loss], fd)
         loss_track.append(l)
@@ -264,8 +264,8 @@ try:
 
     # start prediction
     start = time.time()
-    test_features_batches = helpers.loadDataFile("../data/test_features.txt")
-    test_labels_batches = helpers.loadDataFile("../data/test_labels.txt")
+    test_features_batches = helpers.loadDataFile("../MNIST_data/test_features.txt")
+    test_labels_batches = helpers.loadDataFile("../MNIST_data/test_labels.txt")
     test_fd = next_feed(test_features_batches, test_labels_batches)
     print("Time used: ", time.time() - start)
     print('  tests batch loss: {}'.format(sess.run(loss, test_fd)))

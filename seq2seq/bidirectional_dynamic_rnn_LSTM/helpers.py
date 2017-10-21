@@ -185,15 +185,15 @@ def random_sequences(length_from, length_to,
 
 
 if __name__ == '__main__':
-    #loadDataFile("/Users/lipingzhang/Desktop/program/pycharm/seq2seq/data/0622_train_features.csv")
+    #loadDataFile("/Users/lipingzhang/Desktop/program/pycharm/seq2seq/MNIST_data/0622_train_features.csv")
     '''
     k = 2
     count = 0
     for i in range(0, 2):
-        res = next_batch_k("/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/data/labels.txt", k, count)
+        res = next_batch_k("/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/MNIST_data/labels.txt", k, count)
         print("---" + str(res))
         count += k
     '''
-    fea, lab = random_next_batch_k("/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/data/features.txt", "/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/data/labels.txt", 2, 3)
+    fea, lab = random_next_batch_k("/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/MNIST_data/features.txt", "/Users/lipingzhang/Desktop/program/jd/crackingtensorflow/crackingtensorflow/seq2seq/MNIST_data/labels.txt", 2, 3)
     print("---" + str(fea))
     print("---" + str(lab))

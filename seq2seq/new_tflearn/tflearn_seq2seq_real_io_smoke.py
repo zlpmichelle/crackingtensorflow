@@ -53,7 +53,7 @@ class TFLearnSeq2Seq(object):
 
     def generate_trainig_data(self):
         #<NEEDS UPDATING>
-        feature = open("../data/train_features_int.txt")
+        feature = open("../MNIST_data/train_features_int.txt")
         x_data = []
         lines = 0
         with feature as file:
@@ -63,7 +63,7 @@ class TFLearnSeq2Seq(object):
                 x_data.append([int(i) for i in line])
 
         #<NEEDS UPDATING>
-        label = open("../data/train_labels_int.txt")
+        label = open("../MNIST_data/train_labels_int.txt")
         y_data = []
         with label as file:
             for line in file:
@@ -298,7 +298,7 @@ class TFLearnSeq2Seq(object):
 
         XY = np.append(X, np.array(Yin).astype(np.float32))
         XY = XY.reshape([-1, self.in_seq_len + self.out_seq_len])	# batch size 1
-        if self.verbose > 1: print ("XY Input shape=%s, data=%s" % (XY.shape, XY))
+        if self.verbose > 1: print ("XY Input shape=%s, MNIST_data=%s" % (XY.shape, XY))
 
         res = model.predict(XY)
         res = np.array(res)
@@ -306,7 +306,7 @@ class TFLearnSeq2Seq(object):
         y = res.reshape(self.out_seq_len, self.n_output_symbols)
         prediction = np.argmax(y, axis=1)
         if self.verbose:
-            #print ("X Input shape=%s, data=%s" % (X.shape, X))
+            #print ("X Input shape=%s, MNIST_data=%s" % (X.shape, X))
             print ("Xin = %s" % str(Xin))
             print ("Expected output = %s" % str(self.sequence_pattern.generate_output_sequence(X)))
             print ("Predicted output sequence: %s" % str(prediction))
@@ -323,7 +323,7 @@ class SequencePattern(object):
     INPUT_MAX_INT = 17
     OUTPUT_MAX_INT = 17
     PATTERN_NAME = "sorted"
-    label = open("../data/test_labels_int.txt")
+    label = open("../MNIST_data/test_labels_int.txt")
 
     def __init__(self, name=None, in_seq_len=None, out_seq_len=None):
         if name is not None:
@@ -389,9 +389,9 @@ predict - give input sequence as argument (or specify inputs via --from-file <fi
     parser.add_argument("-n", "--name", type=str, help="name of model, used when generating default weights filenames", default=None)
     parser.add_argument("--in-len", type=int, help="input sequence length (default 10)", default=None)
     parser.add_argument("--out-len", type=int, help="output sequence length (default 10)", default=None)
-    parser.add_argument("--from-file", type=str, help="name of file to take input data sequences from (json format)", default=None)
+    parser.add_argument("--from-file", type=str, help="name of file to take input MNIST_data sequences from (json format)", default=None)
     parser.add_argument("--iter-num", type=int, help="training iteration number; specify instead of input- or output-weights to use generated filenames", default=None)
-    parser.add_argument("--data-dir", help="directory to use for storing checkpoints (also used when generating default weights filenames)", default=None)
+    parser.add_argument("--MNIST_data-dir", help="directory to use for storing checkpoints (also used when generating default weights filenames)", default=None)
     # model parameters
     parser.add_argument("-L", "--num-layers", type=int, help="number of RNN layers to use in the model (default 1)", default=1)
     parser.add_argument("--cell-size", type=int, help="size of RNN cell to use (default 32)", default=32)
