@@ -24,6 +24,7 @@
 * http://acko.net/
 * http://colah.github.io/
 * https://ireneli.eu/
+* http://hp.stuhome.net/index.php/2016/09/20/tensorflow_batch_minibatch/
 
 
 ## Courses Video
