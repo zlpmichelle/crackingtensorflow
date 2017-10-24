@@ -35,6 +35,7 @@
 * https://classroom.udacity.com/courses/ud730/lessons/6370362152/concepts/64063018600923
 * https://www.youtube.com/watch?v=cKxRvEZd3Mw&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=7
 * https://morvanzhou.github.io/tutorials/
+* http://rll.berkeley.edu/deeprlcourse/#lecture-videos
 
 ## Book
 * http://deeplearning.stanford.edu/tutorial/
