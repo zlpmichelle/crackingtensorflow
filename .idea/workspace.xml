@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b05ce5aa-eefb-4218-88c5-d179ed4d6219" name="Default" comment="" />
+    <list default="true" id="b05ce5aa-eefb-4218-88c5-d179ed4d6219" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crackingcode/day4/cc_tf_day4_2.ipynb" afterPath="$PROJECT_DIR$/crackingcode/day4/cc_tf_day4_2.ipynb" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cc_tf_day3_1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cc_tf_day3_1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crackingcode/day3/cc_tf_day3_1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -47,26 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doc2vec/load.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding>
-                <element signature="e#68#81#0" expanded="true" />
-              </folding>
+      <file leaf-file-name="cc_tf_day4_2.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crackingcode/day4/cc_tf_day4_2.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="0" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doc2vectest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doc2vec/doc2vectest.py">
+      <file leaf-file-name="cc_tf_day4_2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crackingcode/day4/cc_tf_day4_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="81" selection-end-column="14" />
-              <folding>
-                <element signature="e#90#103#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-727">
+              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -709,20 +707,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seq2seq/data/real_test_labels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="87" lean-forward="false" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq/data/0622_test_labels.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seq2seq/bidirectional_dynamic_rnn_LSTM/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2190">
@@ -1051,6 +1035,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="150" column="36" lean-forward="true" selection-start-line="150" selection-start-column="36" selection-end-line="150" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crackingcode/day4/cc_tf_day4_2.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crackingcode/day4/cc_tf_day4_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-727">
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding />
         </state>
       </provider>
