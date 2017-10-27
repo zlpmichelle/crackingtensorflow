@@ -28,6 +28,8 @@
 * https://ireneli.eu/
 * http://hp.stuhome.net/index.php/2016/09/20/tensorflow_batch_minibatch/
 * http://neuralnetworksanddeeplearning.com/chap4.html
+* https://distill.pub/2016/misread-tsne/
+* http://setosa.io/ev/principal-component-analysis/
 
 ## Courses Video
 * CS231n: https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
