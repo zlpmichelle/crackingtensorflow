@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05ce5aa-eefb-4218-88c5-d179ed4d6219" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/crackingtensorflow.iml" afterPath="$PROJECT_DIR$/.idea/crackingtensorflow.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,118 +18,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="382">
-                <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mnist_with_summaries.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mnist/mnist_with_summaries.py">
+      <file leaf-file-name="monitors.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/monitor/monitors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="204" column="53" lean-forward="false" selection-start-line="204" selection-start-column="45" selection-end-line="204" selection-end-column="53" />
-              <folding>
-                <element signature="e#1057#1095#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tflearn_seq2seq_real_io_smoke.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seq2seq/new_tflearn/tflearn_seq2seq_real_io_smoke.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4491">
-              <caret line="444" column="8" lean-forward="false" selection-start-line="444" selection-start-column="8" selection-end-line="444" selection-end-column="8" />
-              <folding>
-                <element signature="e#267#314#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cc_tf_day7_1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crackingcode/day7/cc_tf_day7_1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="439">
+              <caret line="118" column="23" lean-forward="false" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="39" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cc_tf_day7_3.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crackingcode/day7/cc_tf_day7_3.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cifar10_input.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crackingcode/day7/cifar10_input.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="237" column="0" lean-forward="true" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-              <folding>
-                <element signature="e#751#789#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="convert_to_records.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crackingcode/day7/convert_to_records.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
-              <folding>
-                <element signature="e#762#800#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fully_connected_reader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crackingcode/day7/fully_connected_reader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2011">
-              <caret line="221" column="22" lean-forward="true" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
-              <folding>
-                <element signature="e#1033#1071#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fully_connected_preloaded.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crackingcode/day7/fully_connected_preloaded.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="166" column="17" lean-forward="true" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
-              <folding>
-                <element signature="e#988#1026#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fully_connected_preloaded_var.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crackingcode/day7/fully_connected_preloaded_var.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="144" column="33" lean-forward="false" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="33" />
-              <folding>
-                <element signature="e#1002#1040#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -229,6 +124,7 @@
         <option value="$PROJECT_DIR$/crackingcode/day7/fully_connected_reader.py" />
         <option value="$PROJECT_DIR$/crackingcode/day7/fully_connected_preloaded.py" />
         <option value="$PROJECT_DIR$/crackingcode/day7/fully_connected_preloaded_var.py" />
+        <option value="$PROJECT_DIR$/crackingcode/debug_tflearn/debug_tflearn_iris.py" />
       </list>
     </option>
   </component>
@@ -416,7 +312,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="day7" />
+              <option name="myItemId" value="debug_tflearn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crackingtensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crackingtensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crackingcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="day8" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,11 +353,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/crackingcode/day8" />
       <recent name="$PROJECT_DIR$/crackingcode/day7" />
       <recent name="$PROJECT_DIR$/crackingcode/day6" />
       <recent name="$PROJECT_DIR$/monitor" />
       <recent name="$PROJECT_DIR$/crackingcode/day5" />
-      <recent name="$PROJECT_DIR$/crackingcode/day4" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/seq2seq/new_tflearn/log/0901" />
@@ -463,25 +377,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.fully_connected_preloaded_var">
-    <configuration default="false" name="cifar10_input" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crackingcode/day7" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="crackingtensorflow" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crackingcode/day7/cifar10_input.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.debug_tflearn_iris">
     <configuration default="false" name="convert_to_records" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -549,6 +445,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="crackingtensorflow" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crackingcode/day7/fully_connected_preloaded_var.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="debug_tflearn_iris" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crackingcode/debug_tflearn" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="crackingtensorflow" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crackingcode/debug_tflearn/debug_tflearn_iris.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -630,19 +544,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.cifar10_input" />
-      <item index="1" class="java.lang.String" itemvalue="Python.convert_to_records" />
-      <item index="2" class="java.lang.String" itemvalue="Python.fully_connected_reader" />
-      <item index="3" class="java.lang.String" itemvalue="Python.fully_connected_preloaded" />
-      <item index="4" class="java.lang.String" itemvalue="Python.fully_connected_preloaded_var" />
+      <item index="0" class="java.lang.String" itemvalue="Python.convert_to_records" />
+      <item index="1" class="java.lang.String" itemvalue="Python.fully_connected_reader" />
+      <item index="2" class="java.lang.String" itemvalue="Python.fully_connected_preloaded" />
+      <item index="3" class="java.lang.String" itemvalue="Python.fully_connected_preloaded_var" />
+      <item index="4" class="java.lang.String" itemvalue="Python.debug_tflearn_iris" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.fully_connected_preloaded_var" />
-        <item index="1" class="java.lang.String" itemvalue="Python.fully_connected_preloaded" />
-        <item index="2" class="java.lang.String" itemvalue="Python.fully_connected_reader" />
-        <item index="3" class="java.lang.String" itemvalue="Python.convert_to_records" />
-        <item index="4" class="java.lang.String" itemvalue="Python.cifar10_input" />
+        <item index="0" class="java.lang.String" itemvalue="Python.debug_tflearn_iris" />
+        <item index="1" class="java.lang.String" itemvalue="Python.fully_connected_preloaded_var" />
+        <item index="2" class="java.lang.String" itemvalue="Python.fully_connected_preloaded" />
+        <item index="3" class="java.lang.String" itemvalue="Python.fully_connected_reader" />
+        <item index="4" class="java.lang.String" itemvalue="Python.convert_to_records" />
       </list>
     </recent_temporary>
   </component>
@@ -687,15 +601,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1904" y="-508" width="1483" height="1053" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26578766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2928522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882273" sideWeight="0.50620157" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29839572" sideWeight="0.49379843" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29839572" sideWeight="0.49379843" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847533" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847533" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2513369" sideWeight="0.49689922" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4299465" sideWeight="0.49689922" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48878923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -755,34 +670,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seq2seq/tflearn_embedding_attention/tflearn_seq2seq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="291" column="14" lean-forward="false" selection-start-line="291" selection-start-column="14" selection-end-line="291" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq/data/0622_test_features.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq/data/real_test_features.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq/data/test_labels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seq2seq/data/train_labels.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -872,20 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq/new_tflearn/log/1010/ts2s__basic__sorted_2.tfl.data-00000-of-00001">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="52" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq/new_tflearn/log/1010/ts2s__basic__sorted_2.tfl.meta">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1034,7 +907,7 @@
         <state relative-caret-position="338">
           <caret line="269" column="20" lean-forward="true" selection-start-line="269" selection-start-column="20" selection-end-line="269" selection-end-column="20" />
           <folding>
-            <element signature="e#760#798#0" expanded="true" />
+            <element signature="e#760#798#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1044,16 +917,6 @@
         <state relative-caret-position="38">
           <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/monitor/monitors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="118" column="2" lean-forward="false" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="39" />
-          <folding>
-            <element signature="e#681#719#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,7 +983,7 @@
     <entry file="file://$PROJECT_DIR$/crackingcode/day7/cifar10_input.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
-          <caret line="237" column="0" lean-forward="true" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
           <folding>
             <element signature="e#751#789#0" expanded="true" />
           </folding>
@@ -1130,7 +993,7 @@
     <entry file="file://$PROJECT_DIR$/crackingcode/day7/convert_to_records.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
           <folding>
             <element signature="e#762#800#0" expanded="true" />
           </folding>
@@ -1140,7 +1003,7 @@
     <entry file="file://$PROJECT_DIR$/crackingcode/day7/fully_connected_reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2011">
-          <caret line="221" column="22" lean-forward="true" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
+          <caret line="221" column="22" lean-forward="false" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
           <folding>
             <element signature="e#1033#1071#0" expanded="true" />
           </folding>
@@ -1150,7 +1013,7 @@
     <entry file="file://$PROJECT_DIR$/crackingcode/day7/fully_connected_preloaded.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="166" column="17" lean-forward="true" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+          <caret line="166" column="17" lean-forward="false" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
           <folding>
             <element signature="e#988#1026#0" expanded="true" />
           </folding>
@@ -1159,11 +1022,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crackingcode/day7/fully_connected_preloaded_var.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="144" column="33" lean-forward="false" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="33" />
+        <state relative-caret-position="-178">
+          <caret line="155" column="22" lean-forward="false" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
           <folding>
             <element signature="e#1002#1040#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crackingcode/day8/cc_tf_day8_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crackingcode/debug_tflearn/debug_tflearn_iris.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2173">
+          <caret line="126" column="34" lean-forward="false" selection-start-line="124" selection-start-column="10" selection-end-line="126" selection-end-column="34" />
+          <folding>
+            <element signature="e#760#798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq/new_tflearn/log/1010/ts2s__basic__sorted_2.tfl.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1452827">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq/new_tflearn/log/1010/ts2s__basic__sorted_2.tfl.index">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq/new_tflearn/log/1010/ts2s__basic__sorted_2.tfl.data-00000-of-00001">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="17" column="52" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq/new_tflearn/log/1010/checkpoint">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor/monitors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="118" column="23" lean-forward="false" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
