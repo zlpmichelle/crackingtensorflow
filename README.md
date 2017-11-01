@@ -30,9 +30,12 @@
 * http://neuralnetworksanddeeplearning.com/chap4.html
 * https://distill.pub/2016/misread-tsne/
 * http://setosa.io/ev/principal-component-analysis/
+* http://www.image-net.org/
+* http://karpathy.github.io/2014/09/02/what-i-learned-from-competing-against-a-convnet-on-imagenet/
 
 ## Courses Video
 * CS231n: https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
+* CS231n: http://cs231n.github.io/
 * CS231n: https://www.youtube.com/watch?v=g-PvXUjD6qg&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA
 * https://classroom.udacity.com/courses/ud730/lessons/6370362152/concepts/64063018600923
 * https://www.youtube.com/watch?v=cKxRvEZd3Mw&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=7
