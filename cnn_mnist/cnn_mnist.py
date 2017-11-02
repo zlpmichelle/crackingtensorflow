@@ -142,7 +142,7 @@ def main(unused_argv):
       x=train_data,
       y=train_labels,
       batch_size=100,
-      steps=20000,
+      steps=200,
       monitors=[logging_hook])
 
   # Configure the accuracy metric for evaluation
