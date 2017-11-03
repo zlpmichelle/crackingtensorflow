@@ -1,0 +1,5 @@
+nohup python cifar10/cifar10_eval.py >log/1102.log 2>&1 &
+
+nohup python word2vec/word2vec_basic.py >log/1102_w2v.log 2>&1 &
+
+nohup python ptb_word_lm.py --data_path=/tmp/simple-examples/data/ --model=small > ../log/1102_rnn.log 2>&1 &
