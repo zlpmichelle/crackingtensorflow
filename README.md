@@ -33,6 +33,7 @@
 * http://www.image-net.org/
 * http://karpathy.github.io/2014/09/02/what-i-learned-from-competing-against-a-convnet-on-imagenet/
 * http://lvdmaaten.github.io/tsne/
+* http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
 ## Courses Video
 * CS231n: https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
