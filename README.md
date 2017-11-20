@@ -35,6 +35,7 @@
 * http://lvdmaaten.github.io/tsne/
 * http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
+
 ## Courses Video
 * CS231n: https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
 * CS231n: http://cs231n.github.io/
@@ -43,6 +44,8 @@
 * https://www.youtube.com/watch?v=cKxRvEZd3Mw&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=7
 * https://morvanzhou.github.io/tutorials/
 * http://rll.berkeley.edu/deeprlcourse/#lecture-videos
+* https://cognitiveclass.ai/courses/deep-learning-tensorflow/
+* https://events.withgoogle.com/tensorflow-dev-summit/
 
 ## Book
 * http://deeplearning.stanford.edu/tutorial/
