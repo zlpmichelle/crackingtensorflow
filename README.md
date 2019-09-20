@@ -34,7 +34,8 @@
 * http://karpathy.github.io/2014/09/02/what-i-learned-from-competing-against-a-convnet-on-imagenet/
 * http://lvdmaaten.github.io/tsne/
 * http://karpathy.github.io/2015/05/21/rnn-effectiveness/
-
+* https://www.zhihu.com/question/41631631
+* https://blog.csdn.net/tiankongtiankong01/article/details/80528379
 
 ## Courses Video
 * CS231n: https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk
@@ -54,11 +55,24 @@
 ## Demo
 * http://playground.tensorflow.org/#activation=tanh&regularization=L1&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=5&networkShape=4,2,2&seed=0.30889&showTestData=false&discretize=true&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false
 * http://cs.stanford.edu/people/karpathy/convnetjs/demo/mnist.html
+* http://carlvondrick.com/tinyvideo/
 
 ## Example
 * https://github.com/aymericdamien/TensorFlow-Examples
 
 
+## Latest Paper Tracking
+* https://arxiv.org/
+* https://arxiv.org/list/cs.AI/recent
 
-# Cracking tensorflow models implementation
+
+## Cracking tensorflow models implementation
 For example, seq2seq models implementation in tensorflow.
+
+## Machine Learning related
+* https://xijunlee.github.io/2017/06/03/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/
+
+
+
+
+

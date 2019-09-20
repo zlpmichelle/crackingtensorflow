@@ -116,6 +116,7 @@ def build_estimator(model_dir, model_type):
       hours_per_week,
   ]
 
+
   if model_type == "wide":
     m = tf.contrib.learn.LinearClassifier(model_dir=model_dir,
                                           feature_columns=wide_columns)

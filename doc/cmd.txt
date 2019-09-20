@@ -5,3 +5,37 @@ nohup python word2vec/word2vec_basic.py >log/1102_w2v.log 2>&1 &
 nohup python rnn/ptb_word_lm.py --data_path=/tmp/simple-examples/data/ --model=small > ../log/1102_rnn.log 2>&1 &
 
 nohup python wide_n_deep/wide_n_deep_tutorial.py --model_type=wide >log/1103_w_d.log 2>&1 &
+
+macbook:
+----
+sudo python -m pip install --upgrade pip
+sudo python -m pip install jupyter
+jupyter notebook --no-browser --port=8888
+
+    To access the notebook, open this file in a browser:
+        file:///Users/lipingzhang/Library/Jupyter/runtime/nbserver-14956-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=ce4bfbd77a075ed05fe62272287e1bc323b48b614b068966
+
+
+ubunt:
+----
+ssh Liping.Zhang@10.252.199.9
+source /home/Liping.Zhang/install/tf/venv/bin/activate
+cd /home/Liping.Zhang/lipingzhang/github/jd_SearchDL/SearchDL/tflearn_embedding_attention
+
+pip install jupyter
+
+jupyter notebook --no-browser --port=1234
+jupyter notebook
+
+    To access the notebook, open this file in a browser:
+        file:///run/user/1006/jupyter/nbserver-163191-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:1234/?token=69a3593eba24c6dff7f7147b2a68a5a19a5b6e4aef83da8b
+
+ssh -N -f -L localhost:8881:localhost:1234 Liping.Zhang@10.252.199.9
+http://localhost:8881/tree?
+
+enter token
+
